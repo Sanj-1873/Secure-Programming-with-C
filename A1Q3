@@ -1,0 +1,31 @@
+A.3 If the next line is a function call, you'll execute the call in one step. How do you execute the C code, line by line, inside the function call?
+
+#include<stdio.h>
+int sum=0,val,num=0;
+double avg;
+
+int foo();
+int main(int argc, char *argv[])
+{        int i = 1;
+        foo();    
+        while(i<argc)
+        {    char *hold = argv[i];
+            val = atoi(hold);
+            sum+=val;
+            num++;
+            i++;
+            
+        }
+        if(num>0)
+        {
+            avg = sum/num;
+            printf("Average is %f \n",avg);
+        }
+}
+
+int foo()
+{
+    printf("Inside foo\n");
+    return 1;
+}
+
