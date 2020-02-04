@@ -1,0 +1,23 @@
+//How do you pass command line arguments to a program when using gdb?
+#include<stdio.h>
+int sum=0,val,num=0;
+double avg;
+
+
+int main(int argc, char *argv[])
+{        int i = 1;
+
+        while(i<argc)
+        {    char *hold = argv[i];
+            val = atoi(hold);
+            sum+=val;
+            num++;
+            i++;
+            
+        }
+        if(num>0)
+        {
+            avg = sum/num;
+            printf("Average is %f \n",avg);
+        }
+}
