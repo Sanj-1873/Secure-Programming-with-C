@@ -1,4 +1,7 @@
 1A.4How do you configure gdb so it prints the value of a variable after every step?
+//display variable_name
+
+
 #include<stdio.h>
 int sum=0,val,num=0,x=5;
 double avg;
