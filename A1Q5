@@ -1,0 +1,34 @@
+1A.5 How do you print a list of all variables and their values in the current function?
+//info locals
+
+#include<stdio.h>
+int sum=0,val,num=0,x=5;
+double avg;
+
+int foo();
+int main(int argc, char *argv[])
+{        int i = 1;
+        foo();
+        x = 10;
+        while(i<argc)
+        {    char *hold = argv[i];
+            val = atoi(hold);
+            sum+=val;
+            num++;
+            i++;
+            
+        }
+        if(num>0)
+        {
+            avg = sum/num;
+            printf("Average is %f \n",avg);
+        }
+}
+
+int foo()
+{    
+    x = 20;
+    printf("Inside foo\n");
+    
+    return 1;
+}
